@@ -1,0 +1,36 @@
+Spring:
+  output:
+    ansi:
+      enabled: always
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat_app
+    username: root
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 4000
+  error:
+    include-message: always
+
+app:
+  jwtSecret: BAvl5GWxoeZRkbsqM244PpfUWU8UuCWQstBiO9fLRcJmgimSesfpVnkpMF62C5w
+  jwtExpirationInMs: 86400000 # 24 hrs
